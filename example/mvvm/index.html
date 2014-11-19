@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MVVM - AngularJS Tutorials</title>
+  <link rel="stylesheet" href="app/css/foundation.min.css">
+</head>
+<body>
+  <div ng-app="myApp">
+    <div ng-controller="mvvmCtrl">
+      <form ng-model="form">
+        <label name="person">Person</label><input name="person" type="text" ng-model="form.person">
+        <label name="city">City</label><input name="city" type="text" ng-model="form.city">
+        <br><br><br><br>
+
+          <address ng-show="form">
+              Your Label:
+              {{form.person}}
+              <br>
+              Your City:
+              {{form.city}}
+          </address>
+
+        <button ng-click="foo()" ng-show="form">foo</button>
+      </form>
+
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+  <script type="text/javascript" src="app/js/main.js"></script>
+</body>
+</html>
